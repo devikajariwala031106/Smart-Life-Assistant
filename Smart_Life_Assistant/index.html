@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Life Assistant</title>
+</head>
+
+<body>
+    <script>
+
+        console.log("----Fitness Suggestion System----");
+
+        let age = Number(prompt("Enter your age: "));
+        let weight = parseFloat(prompt("Enter your weight (kg): "));
+
+        if (age >= 18 && age <= 30) {
+            if (weight >= 50 && weight <= 70) {
+                console.log("You are fit for your age group.");
+            }
+            else if (weight < 50) {
+                console.log("You are underweight for your age. Consider a healthy diet.");
+            }
+            else {
+                console.log("You are overweight for your age. Try regular exercise and diet.");
+            }
+        }
+        else {
+            console.log("This Age group is not valid for fitness suggestion.");
+        }
+
+
+        console.log("----Monthly Budget Planner----");
+
+        let income = Number(prompt("Enter your monthly income(₹) : "));
+
+        if (income <= 0) {
+            console.log("Please Enter a valid amount");
+        }
+        else if (income < 10000) {
+            console.log("Spend cautiously and save more!");
+        }
+        else if (income >= 10000 && income <= 30000) {
+            console.log("Balanced budget!..");
+        }
+        else {
+            console.log("Great! You can consider investing.")
+        }
+
+
+        console.log("----Mobile Data Usage Alert System----");
+
+        let data = Number(prompt("Total data used in a month (in GB) : "));
+
+        if (data < 5) {
+            console.log("You are a low data user..");
+        }
+        else if (data <= 15) {
+            console.log("You are a normal data user..");
+        }
+        else {
+            console.log("You are a heavy data user, consider a bigger plan..");
+        }
+
+
+        console.log("----Change Password Logic----");
+
+        let oldpassword = "abc123";
+        let enterold = prompt("Enter Old password : ");
+        let newpassword = prompt("Enter New password : ");
+        let confirmpass = prompt("Enter Confirm password : ");
+
+        if (enterold == oldpassword) {
+            if (newpassword == confirmpass) {
+                console.log("Password changed successfully.");
+            }
+            else {
+                console.log("Passwords do not match.");
+            }
+        }
+        else {
+            console.log("Old password is incorrect.");
+        }
+
+    </script>
+</body>
+
+</html>
